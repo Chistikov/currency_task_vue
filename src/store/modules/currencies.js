@@ -35,6 +35,10 @@ export let currencies = {
     setCurrenciesValues(state, data) {
       state.currenciesValues = data;
     },
+
+    resetFavoriteCurrencies(state) {
+      state.favoriteCurrencies = [];
+    },
   },
 
   actions: {
