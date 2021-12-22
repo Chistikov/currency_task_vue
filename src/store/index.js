@@ -1,12 +1,8 @@
-import { createStore } from 'vuex'
+import { createStore } from "vuex";
+import { currencyConverter } from "./modules/currencyConverter.js";
 
 export default createStore({
-  state: {
-  },
-  mutations: {
-  },
-  actions: {
-  },
   modules: {
-  }
-})
+    currencyConverter,
+  },
+});

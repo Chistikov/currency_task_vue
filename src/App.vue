@@ -7,7 +7,9 @@
         <router-link to="/currencies"><a-button type="link">Валюты</a-button></router-link>
       </span>
     </a-layout-header>
-    <a-layout-content><router-view /></a-layout-content>
+    <a-layout-content class="content">
+      <router-view />
+    </a-layout-content>
   </a-layout>
 </template>
 
@@ -18,6 +20,11 @@ export default {
   },
 };
 </script>
+
+<style lang="sass">
+body
+  min-width: 500px
+</style>
 
 <style lang="sass" scoped>
 .header
@@ -34,4 +41,8 @@ export default {
 
 .layout
   min-height: 100vh
+
+  .content
+    padding: 45px
+    background: #fff
 </style>
