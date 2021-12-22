@@ -62,6 +62,8 @@ export default {
         .then(() => this.setBaseCurrency())
         .then(() => this.setSecondCurrency())
         .then(() => this.computeSecondCurrencyAmount());
+    } else {
+      this.computeSecondCurrencyAmount();
     }
   },
 
