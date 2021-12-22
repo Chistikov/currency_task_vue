@@ -25,4 +25,14 @@ APIService.prototype.fetchExchangeRate = async function (baseCurrency, secondary
   }
 };
 
+APIService.prototype.fetchDependCurrencies = async function (baseCurrency) {
+  try {
+    let response = await fetch(`${this.API_URL}/fetch-all?from=${baseCurrency}&api_key=${this.API_KEY}`);
+    let data = await response.json();
+    return Object.entries(data.results);
+  } catch (error) {
+    console.error(error);
+  }
+};
+
 export let apiService = new APIService();
