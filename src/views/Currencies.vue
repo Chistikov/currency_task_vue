@@ -73,10 +73,12 @@ export default {
     ...mapMutations({
       addToFavoriteCurrencies: "currencies/addToFavoriteCurrencies",
       removeFromFavoriteCurrencies: "currencies/removeFromFavoriteCurrencies",
+      resetFavoriteCurrencies: "currencies/resetFavoriteCurrencies",
     }),
 
     baseCurrencyChangeHandler(currency) {
       this.setBaseCurrency(currency);
+      this.resetFavoriteCurrencies();
       this.setCurrenciesValuesDependOn(this.baseCurrency);
     },
   },
